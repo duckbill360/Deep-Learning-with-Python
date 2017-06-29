@@ -85,3 +85,40 @@ model.fit(x_train,
 
 results = model.evaluate(x_test, one_hot_test_labels)
 print(results)
+
+
+# Generating predictions on new data (p.89)
+predictions = model.predict(x_test)
+print(predictions[0])
+print(np.sum(predictions[0]))
+print(np.argmax(predictions[0]))
+
+
+# On the importance of having sufficiently large intermediate layers (p.90)
+model = models.Sequential()
+model.add(layers.Dense(64, activation='relu', input_shape=(10000, )))
+model.add(layers.Dense(8, activation='relu'))
+model.add(layers.Dense(46, activation='softmax'))
+
+model.compile(optimizer='rmsprop',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+model.fit(x_train,
+          one_hot_train_labels,
+          epochs=10,
+          batch_size=128,
+          validation_data=(x_test, one_hot_test_labels))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
