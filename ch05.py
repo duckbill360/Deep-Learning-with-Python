@@ -39,11 +39,3 @@ model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.fit(train_images, train_labels, epochs=5, batch_size=64)
-
-
-# 5.2 Training a convnet from scratch on a small dataset (p.131)
-
-
-
-
-
