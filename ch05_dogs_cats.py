@@ -128,6 +128,7 @@ validation_generator = test_datagen.flow_from_directory(validation_dir,
                                                         class_mode='binary')
 
 
+# Listing 5.16 Fitting our model using a batch generator (p.138)
 
 
 
