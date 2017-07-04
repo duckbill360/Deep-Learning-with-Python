@@ -4,10 +4,10 @@
 import os, shutil
 
 # The path to the directory where the original dataset was uncompressed
-original_dataset_dir = ''
+original_dataset_dir = 'E:/train/'
 
 # The directory where we will store our smaller dataset
-base_dir = ''
+base_dir = 'E:/train/smaller'
 os.mkdir(base_dir)
 
 # Directories for our training, validation, and test splits
