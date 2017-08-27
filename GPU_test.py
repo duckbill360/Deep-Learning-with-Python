@@ -11,8 +11,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '0'  # or any {'0', '1', '2'}
 def get_times(maximum_time):
 
     device_times = {
-        "/gpu:0":[],
-        "/cpu:0":[]
+        "/gpu:0": [],
+        "/cpu:0": []
     }
     matrix_sizes = range(500, 50000, 50)
 
