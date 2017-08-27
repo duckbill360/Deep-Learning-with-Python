@@ -28,7 +28,6 @@ def get_times(maximum_time):
                 r2 = tf.random_uniform(shape=shape, minval=0, maxval=1, dtype=data_type)
                 dot_operation = tf.matmul(r2, r1)
 
-
             with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as session:
                     start_time = time.time()
                     result = session.run(dot_operation)
